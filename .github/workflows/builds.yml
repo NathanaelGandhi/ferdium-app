@@ -299,7 +299,7 @@ jobs:
           CSC_IDENTITY_AUTO_DISCOVERY: false
           SNAPCRAFT_LOGIN: ${{ secrets.SNAPCRAFT_LOGIN }}
         run: |
-          sudo snap install snapcraft --channel=5.x/stable --classic
+          sudo snap install snapcraft --channel=6.x/stable --classic
           echo "$SNAPCRAFT_LOGIN" | snapcraft login --with -
           pnpm build --publish always -c.snap.publish.repo=$SNAP_PUBLISH_REPO -c.snap.publish.channels=$SNAP_PUBLISH_CHANNEL
           snapcraft logout
